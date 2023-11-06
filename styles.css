@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#vapour {
+    width: 100%;
+}
+
+#man_orcs {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+

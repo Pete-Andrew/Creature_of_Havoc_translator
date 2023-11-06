@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Creature of Havoc Translator</title>
+</head>
+<body>
+
+<!-- div class column breaks the page into 3 columns -->
+<div class="column">
+    <img src="./src/vapour.png" alt="" id="vapour">
+</div>
+
+<div class="column">
+    <h1>Creature of Havoc Translator</h1>
+    
+    <div>
+        <p>There are three rules to this code: <br><br>
+            1. each vowel has been replaced by the following letter, e.g. b = a, f = e, etc... <br>
+            2. existing vowels represent spaces <br>
+            3. actual spaces are random and mean nothing <br><br>
+            However, the current code replaces ALL consonants that follow vowels with their preceding vowel. This makes a mess but is easier to read then the raw encoded text.    
+        </p>
+    </div>
+
+    <div>
+    <p>some example text: 
+    <br> whpojs ijt. Whb tajs i hbp pfnjng. W hbta hb sad jstvr bf devs. Plf bsfe gpdor fl  fbsf ethjs iblb cka fyfec vrsf.</p> 
+    <p> Who is it. What is happening. What has disturbed us. Please god release this black eye curse.</p>
+    
+    </div>
+    
+    <label id="putTextHere" for="fname">put your encoded text here:</label> <br><br>
+       
+    <textarea id="inputSentance" name="noIdeaWhatThisDoes" rows="4" cols="50"></textarea>
+    <br>
+    <!-- On click submit button runs stringFunc  -->
+    <!-- <input type="submit" value="Submit" id="submitButton" onclick="decoder();"> -->
+    <br><br>
+<div>
+    <button onclick="decoder()">Code to English</button>
+    <button onclick="encoder()">English to Code</button>
+    <!-- creates a button that clears the text box -->
+    <button onclick="document.getElementById('inputSentance').value = ''">Clear Input</button>
+    <button onclick="document.getElementById('outputSentance').value = ''">Clear Output</button>
+    <br><br>
+</div>
+
+
+    <label id="putTextHere" for="fname">translated text:</label> <br><br>
+
+    <textarea id="outputSentance" name="noIdeaWhatThisDoes" rows="4" cols="50"></textarea>    
+</div>
+
+<div class="column">
+    <img src="./src/man_orcs.png" alt="" id="man_orcs">
+</div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
