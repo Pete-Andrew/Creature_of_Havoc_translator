@@ -81,7 +81,7 @@ function replaceVowels (outputArray) {
  
  		var modified = 
     noSpaceString.map(e => e
-    .replace("f","e")
+    .replace("f", "e")
     .replace("b", "a")
     .replace("j", "i")
     .replace("p", "o")
@@ -156,11 +156,43 @@ function encoder () {
   
   replaceSpaceWithVowels(vowelsReplaced)
 
-  //convert the array to a string
+  //add random spaces
+  //This next bit was written with the help of chat GTP to see if it could help me with coding. It did. 
+
+  function addRandomBlankSpaces(array) {
+    //creates a blank array to push the new array to
+    const result = []; 
+    // creates a boolean variable, assigns it false
+    let prevIsSpace = false;
+
+    //looks at the array. If there is not a space previously and math random gives a number < 0.25 then push a blank space to the array and set previous space to true
+    //for loop is used for iterating over the sequence. In this case the vowelsReplacedArray. 
+  for (const item of array) {     
+    if (!prevIsSpace && Math.random() < 0.25) {
+      result.push(" ");           // Add a blank space with a 25% probability
+      prevIsSpace = true;         //sets the prevIsSpace to true so that the for loop won't add another space after an existing one. 
+    }
+    
+    //if the above code doesn't generate a blank space 'result.push(item)' will push a letter from the existing array to the new one and reset the prevIsSpace to false
+    //so a space can potentially be placed next time. 
+
+    result.push(item);  
+    prevIsSpace = false;
+  }
+
+  return result;
+
+}
+// creates a variable that equals the result of the 'addRandomBlankSpaced' function above with the 'vowelsReplacedArray' passed into it. 
+var codeWithRandomSpaces = addRandomBlankSpaces(vowelsReplacedArray);
+
+console.log("code with random spaces " + codeWithRandomSpaces);
+
+   //convert the array to a string
 
   function convertedToCode () {
           
-    const encodedFinalString = vowelsReplacedArray
+    const encodedFinalString = codeWithRandomSpaces
     .toString()
     .split(",")
     .join("")
@@ -171,9 +203,9 @@ function encoder () {
   convertedToCode();
 }  
   
-  //add random spaces
 
-  
+
+
 
 /* Notes: 
  
@@ -183,3 +215,5 @@ There are three rules to this code:
 3. actual spaces are random and mean nothing
 
 */
+
+
