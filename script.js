@@ -172,12 +172,13 @@ function encoder () {
       result.push(" ");           // Add a blank space with a 25% probability
       prevIsSpace = true;         //sets the prevIsSpace to true so that the for loop won't add another space after an existing one. 
     }
-    
     //if the above code doesn't generate a blank space 'result.push(item)' will push a letter from the existing array to the new one and reset the prevIsSpace to false
     //so a space can potentially be placed next time. 
-
+    //prevIsSpace then made false again. 
+    // this is NOT and if/else statement as the below code does not run as an alternative to the 'if' loop. 
     result.push(item);  
     prevIsSpace = false;
+   
   }
 
   return result;
