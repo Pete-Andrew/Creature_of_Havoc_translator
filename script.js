@@ -180,10 +180,9 @@ function encoder () {
     prevIsSpace = false;
    
   }
-
   return result;
-
 }
+
 // creates a variable that equals the result of the 'addRandomBlankSpaced' function above with the 'vowelsReplacedArray' passed into it. 
 var codeWithRandomSpaces = addRandomBlankSpaces(vowelsReplacedArray);
 
@@ -204,8 +203,7 @@ console.log("code with random spaces " + codeWithRandomSpaces);
   convertedToCode();
 }  
   
-
-
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 /* Notes: 
@@ -216,5 +214,7 @@ There are three rules to this code:
 3. actual spaces are random and mean nothing
 
 */
+
+//sometimes throws an error at line 84 "unable to read .replace". Not sure why
 
 
