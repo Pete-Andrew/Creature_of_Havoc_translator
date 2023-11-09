@@ -17,29 +17,39 @@
     <h1>Creature of Havoc Translator</h1>
     
     <div>
-        <p>There are three rules to this code: <br><br>
+        <p>
+            This is a decoder for the fighting fantasy book Creature of Havoc using the books original rules for decoding.
+            I added an encoder as well. 
+        </p>
+    </div>
+
+
+    <div>
+        <h3>There are three rules to this code: </h3>
+        <p>
             1. each vowel has been replaced by the following letter, e.g. b = a, f = e, etc... <br>
             2. existing vowels represent spaces <br>
             3. actual spaces are random and mean nothing <br><br>
-            However, the current code replaces ALL consonants that follow vowels with their preceding vowel. This makes a mess but is easier to read then the raw encoded text.    
+            However, this code replaces ALL consonants that follow vowels with their preceding vowel. This means the decoding isn't perfect but is easier to read then the raw encoded text.    
         </p>
     </div>
 
     <div>
-    <p>some example text: 
-    <br> whpojs ijt. Whb tajs i hbp pfnjng. W hbta hb sad jstvr bf devs. Plf bsfe gpdor fl  fbsf ethjs iblb cka fyfec vrsf.</p> 
-    <p> Who is it. What is happening. What has disturbed us. Please god release this black eye curse.</p>
+    <h3>Some example text from the book:</h3> 
+    <p>whpojs ijt. Whb tajs i hbp pfnjng. W hbta hb sad jstvr bf devs. Plf bsfe gpdor fl  fbsf ethjs iblb cka fyfec vrsf.</p> 
+    <h3>The English translation:</h3>
+    <p>Who is it. What is happening. What has disturbed us. Please god release this black eye curse.</p>
     
     </div>
     
-    <label id="putTextHere" for="fname">put your encoded text here:</label> <br><br>
+    <h3>put your encoded text here:</h3>
        
     <textarea id="inputSentance" name="noIdeaWhatThisDoes" rows="4" cols="50"></textarea>
     <br>
     <!-- On click submit button runs stringFunc  -->
     <!-- <input type="submit" value="Submit" id="submitButton" onclick="decoder();"> -->
     <br><br>
-<div>
+<div id="clickButtons">
     <button onclick="decoder()">Code to English</button>
     <button onclick="encoder()">English to Code</button>
     <!-- creates a button that clears the text box -->
@@ -49,7 +59,7 @@
 </div>
 
 
-    <label id="putTextHere" for="fname">translated text:</label> <br><br>
+    <h3>translated text:</h3>
 
     <textarea id="outputSentance" name="noIdeaWhatThisDoes" rows="4" cols="50"></textarea>    
 </div>

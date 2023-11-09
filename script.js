@@ -215,6 +215,12 @@ There are three rules to this code:
 
 */
 
-//sometimes throws an error at line 84 "unable to read .replace". Not sure why
+//sometimes throws an error at line 84 ---> 
 
+// Uncaught TypeError: Cannot read properties of undefined (reading 'replace')
+//     at script.js:84:6
+//     at Array.map (<anonymous>)
+//     at placeVowels (script.js:83:19)
+//     at decoder (script.js:97:2)
+//     at HTMLButtonElement.onclick (main.html:53:33)
 
