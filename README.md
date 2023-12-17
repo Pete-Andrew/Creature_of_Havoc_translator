@@ -1,1 +1,0 @@
-# Creature_of_Havoc_translator
